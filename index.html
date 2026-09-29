@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Especial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Você está convidado!</h1>
+      <p class="detalhes">31 de Outubro • 19:00 • Local do Evento</p>
+    </header>
+
+    <section class="card-convite">
+      <p class="mensagem">Venha celebrar conosco essa data especial. Por favor, confirme sua presença até o dia 20 de outubro.</p>
+
+      <form id="rsvp-form">
+        <div class="campo">
+          <label for="nome">Seu Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+        </div>
+
+        <div class="campo">
+          <label>Você comparecerá?</label>
+          <div class="radios">
+            <label><input type="radio" name="presenca" value="Sim, confirmo!" required> Sim, confirmo!</label>
+            <label><input type="radio" name="presenca" value="Infelizmente não poderei"> Não poderei ir</label>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="acompanhantes">Número de acompanhantes:</label>
+          <input type="number" id="acompanhantes" name="acompanhantes" min="0" value="0">
+        </div>
+
+        <button type="submit" id="btn-enviar">Confirmar Presença</button>
+      </form>
+
+      <div id="mensagem-sucesso" class="sucesso hidden">
+        <h3>Obrigado!</h3>
+        <p>Sua resposta foi registrada com sucesso na lista de presença.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
